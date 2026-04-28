@@ -58,6 +58,11 @@ Remember, your code should already have setters for all the booking values and y
 make use of these to update a value. For example if my code needs to update the `first` name
 to 'John' for a booking at index '1' then the code to do this is `book_list[1].first = "John"`.
 
+### What your completed Step 3 program should do
+Your finished program should allow for the CRUD functionality on all four fields (first, last, 
+mobile and no_of_guests). This will include the ability to read and write the records into a CSV 
+file.
+
 Save your completed file as **step3*firstamelastname*.py** - where _firstname_ is your first 
 name and _lastname_ is your lastname. 
 
