@@ -1,6 +1,18 @@
 # Step 2
 
-In this step you will add validation. 
+In this step you will add validation. What follows is an object description table. Below the table 
+are details on how this is to be implemented. *Note: this table is given in a form which similar to
+the form described in  VCE Software Development advice VCAA. It also reflects aspects which
+are Python specific and as such is a format you can follow when it comes to you designing your SAT later in the semester. 
+However, when it comes to preparing for the VCAA EoY exam you should be familiar with the standard the
+VCAA use, which has not been adapted for Python.*
+
+| Name                                  | Booking                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Properties <br/>(associated Attributes) | first (_first) (string)<br/>   last (_last) (string) <br/> mobile (_mobile) (string)<br/>no_of_guests (_no_of_guests) (string or integer)                                                                                                                                                                                                                                                                                           |
+| Methods                                 | `__init__()` - to initialise objects<br/> `__str__()` - to return a string containing data on all objects<br/>getter/setter for first (using @property and @first.settor decorators)<br/>getter/setter for last (using @property and @last.settor decorators)<br/>getter/setter for mobile (using @property and @mobile.settor decorators)<br/>getter/setter for no_of_guests (using @property and @no_of_guests.settor decorators) 
+    |
+
 
 As adding or updating a booking should ideally involve some form of validation we
 need to consider where validation code should occur. For example, our code could 
@@ -87,7 +99,10 @@ and I suggest you watch https://youtu.be/k4efInGWlYI for
 an explanation of this technique if it's not clear.
 
 Within the while loop, the code handles any error within the try except block. Bookings
-only get appended to the `book_list` where no error was raised.
+only get appended to the `book_list` where no error was raised. So while an object of Booking type is 
+created when an error occurs, because it isn't added to the book_list there ends up being no reference
+to the object (with the error). When an object exists without a reference Python garbage collection 
+will dispose of it.
 
 In a similar way you update should your code to Step1 to make this same change, and also 
 the following changes.
@@ -103,6 +118,12 @@ program displays the appropriate error type and details to the user:
   * nothing entered
   * not a valid integer
   * not a number between 1 and 4
+
+Note: there are two valid approaches to performing validation and a range check on no_of_guests. One approach is to 
+try to convert the value passed to the setter function to an integer and then check that it is within the appropriate 
+range. Another way is to leave the value passed as a string and check that it is one of the characters '1','2','3', or '4'.
+Both methods can be referred to as a range check. You should be familiar with both methods in Python. Samples of both 
+forms of range checking can be found [here](https://sites.google.com/bssc.edu.au/bssd34/unit-3/area-of-study-1-programming/validation-techniques).
 
 If any of the values above is not valid then a ValueError is raised the booking is not 
 added to the list. 
