@@ -24,7 +24,6 @@ include the get_list() method.
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Properties <br/>(associated Attributes) | first (_first) (string)<br/>   last (_last) (string) <br/> mobile (_mobile) (string)<br/>no_of_guests (_no_of_guests) (string or integer)                                                                                                                                                                                                                                                                                                                                     |
 | Methods                                 | `__init__()` - to initialise objects<br/> `__str__()` - to return a string containing data on all objects<br/>getter/setter for first (using @property and @first.settor decorators)<br/>getter/setter for last (using @property and @last.settor decorators)<br/>getter/setter for mobile (using @property and @mobile.settor decorators)<br/>getter/setter for no_of_guests (using @property and @no_of_guests.settor decorators)<br/>get_list() - returns the object as a list |
-    |
 
 
 ### Reading the bookings into a file
