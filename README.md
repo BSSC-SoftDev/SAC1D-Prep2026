@@ -1,4 +1,5 @@
-# 2025 SAC1D prep
+# 2026 SAC1D prep
+By Warren Sutton
 
 This project is intended as a preparatory task for the SAC 1D test. It covers a number of steps which build on previous steps. Each step has an associated explanation and in some instances separate starter files/code. 
 You are going to create a booking system for a Smarthouse tour.
